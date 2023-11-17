@@ -35,10 +35,18 @@ p {
   margin: 0;
 }
 
+nav {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  gap: 10px;
+  padding-right: 50px;
+  padding-bottom: 10px;
+}
+
 /* .main-grid { 
-banner-image banner-image banner-image
-about-heading about-content about-content
-work-heading project-1 project-1
+"hero-banner hero-banner hero-banner"
+about 
 work-heading project-2 project-3
 work-heading project-4 project-5
 contact-heading contact-content contact-content
