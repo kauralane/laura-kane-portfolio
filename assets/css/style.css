@@ -44,10 +44,102 @@ nav {
   padding-bottom: 10px;
 }
 
-/* .main-grid { 
-"hero-banner hero-banner hero-banner"
-about 
-work-heading project-2 project-3
-work-heading project-4 project-5
-contact-heading contact-content contact-content
-} */
+#hero-banner {
+  grid-area: hero-banner;
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 1;
+  background-color: blue;
+}
+
+/* style for the parent grid container */
+.parent-grid-container { 
+  display: grid; 
+  width: 100%;
+  grid-template-rows: 25% 60% 15%;
+  grid-template-columns: 20% 80%;
+  grid-template-areas:
+  "about-heading about-text"
+  "work-heading projects-grid-container"
+  "contact-heading contact-links";
+  } 
+
+  /* add in code here that applies to all parent grid items, eg. heading, opaque background bit? */
+.grid-item {
+
+}
+  
+  /* positioning of the grid items */
+  .about-heading {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+  }
+  
+  .about-text {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+  }
+  
+  .work-heading {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+  }
+  
+  /* this is the nested container position */
+  .projects-grid-container {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+  }
+  /* unsure how this works because class projects-grid-container is held elsewhere?  */
+  
+  .contact-heading {
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1;
+  }
+  
+  .contact-links {
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+  }
+
+  .projects-grid-container {
+    display: grid;
+    width: 100%;
+    Gap: 10px;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "project-1 project-1"
+    "project-1 project-1"
+    "project-2 project-3"
+    "project-4 project-5";
+    }
+    
+    /* add code in here for properties that you want on all the nested grid items */
+    .nested-item {
+    }
+    
+    /* Positioning individual project elements within the nested grid */
+    .project-1 {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2;
+    }
+    
+    .project-2 {
+      grid-column: 1 / span 1;
+      grid-row: 3 / span 1;
+    }
+    
+    .project-3 {
+      grid-column: 2 / span 1;
+      grid-row: 3 / span 1;
+    }
+    
+    .project-4 {
+      grid-column: 1 / span 1;
+      grid-row: 4 / span 1;
+    }
+    
+    .project-5 {
+      grid-column: 2 / span 1; 
+      grid-row: 4 / span 1;
+    }

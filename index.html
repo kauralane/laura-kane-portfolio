@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Laura Kane Front-End Web Developer Portfolio</title>
-  <link rel="stylesheet" href="./assets/css/normalise.css" />
+  <link rel="stylesheet" href="./assets/css/normalise.css" /> 
+  <!--normalise.css credit: github.com/necolas/normalize.css-->
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
@@ -23,29 +24,38 @@
   </header>
 
   <!-- hero banner -->
-  <section class="hero-banner" id="hero-banner">
+  <section id="hero-banner">
     <div>
       <h2>Front-End Web Development Portfolio</h2>
     </div>
   </section>
 
-<section class="main-grid">
   <main class="page-wrapper">
-    <!-- about me -->
-    <section class="page-section" id="about">
-      <h2>About Me</h2>
-      <p id>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nisi debitis inventore, explicabo quo dignissimos aut. Aut in repellendus error ipsa, similique voluptas esse maxime beatae explicabo libero quae fugit.</p>
-    </section>
 
-    <!-- portfolio container -->
-    <section class="page-section" id="work">
-      <h2>My Work</h2>
-    </section>
+    <div class="parent-grid-container">
 
-    <!-- contact -->
-    <section class="page-section contact" id="contact">
-      <h2>Contact Me</h2>
-    </section>
+      <div class="grid-item about-heading" >About Me</div>
+      <div class="grid-item about-text">I am Laura Kane I am very good with technology and awesome at coding!</div>
+
+      <div class="grid-item work-heading">My Work</div>
+
+        <div class="grid-item projects-grid-container">
+          <div class="nested-item project-1">Project 1</div>
+          <div class="nested-item project-2">Project 2</div>
+          <div class="nested-item project-3">Project 3</div>
+          <div class="nested-item project-4">Project 4</div>
+          <div class="nested-item project-5">Project 5</div>
+        </div>
+
+      <div class="grid-item contact-heading">Contact Me</div>
+
+      <div class="grid-item contact-links">
+      <a href=#link1>Email<a> 
+      <a href=#link2>LinkedIn<a>
+      <a href=#link3>GitHub<a></a>
+      </div>
+
+    </div> 
   </main>
 </section>
 
