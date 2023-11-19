@@ -3,18 +3,20 @@
   font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
-.hero-banner {
-  display:flex;
-  background-color:grey;
-  width:100%;
-  height:100px;
-  /* background-image:url(#); */
+header {
+  background-color:#FCD703;  
+}
+
+h1 {
+  color:#D703FC;
+  position: relative;
+  left: 15px;
+  top: 15px;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: auto;
+  padding: auto;
   line-height: 1.5;
 }
 
@@ -38,6 +40,12 @@ nav {
   gap: 10px;
   padding-right: 50px;
   padding-bottom: 10px;
+  background-color: #FCD703;
+}
+
+a {
+  text-decoration: underline;
+  color:#D703FC;
 }
 
 #hero-banner {
@@ -46,7 +54,7 @@ nav {
   position: relative;
   padding-top: 50px;
   height: 100px;
-  background-color:pink;
+  background-image:url("../images/banner-image.jpeg");
 }
 
 .hero-heading {
