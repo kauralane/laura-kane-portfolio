@@ -109,6 +109,8 @@ a {
   .work-heading {
   grid-column: 1 / span 1;
   grid-row: 2 / span 1;
+  display: flex;
+  justify-content: flex-end;
   }
   
   /* this is the nested container position */
@@ -121,6 +123,8 @@ a {
   .contact-heading {
   grid-column: 1 / span 1;
   grid-row: 3 / span 1;
+  display: flex;
+  justify-content: flex-end;
   }
   
   .contact-links {
@@ -131,7 +135,7 @@ a {
   .projects-grid-container {
     display: grid;
     width: 100%;
-    Gap: 10px;
+    gap: 10px;
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -151,24 +155,32 @@ a {
     .project-1 {
       grid-column: 1 / span 2;
       grid-row: 1 / span 2;
+      background-image: url("../images/project-1.jpeg");
+      background-size: cover;
+      display: block;
+      width: 100%;
     }
     
     .project-2 {
       grid-column: 1 / span 1;
       grid-row: 3 / span 1;
+      background-image:url("../images/project-3.jpeg");
     }
     
     .project-3 {
       grid-column: 2 / span 1;
       grid-row: 3 / span 1;
+      background-image:url("../images/project-3.jpeg");
     }
     
     .project-4 {
       grid-column: 1 / span 1;
       grid-row: 4 / span 1;
+      background-image:url("../images/project-4.jpeg");
     }
     
     .project-5 {
       grid-column: 2 / span 1; 
       grid-row: 4 / span 1;
+      background-image:url("../images/project-5.jpeg");
     }
