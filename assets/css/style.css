@@ -200,6 +200,7 @@ a {
       background-repeat: no-repeat;
       margin: 5px;
       cursor: pointer;
+      text-decoration: none;
       }
 
 /* styles for nested grid headings */
