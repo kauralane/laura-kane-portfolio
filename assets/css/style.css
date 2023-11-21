@@ -1,7 +1,7 @@
 :root {
-  --pink:#cb46e3;
-  --yellow:hsl(51, 86%, 75%);
-  --turquoise:#57c0f8;
+  --main-accent-color:#cb46e3;
+  --background-color:hsl(51, 86%, 75%);
+  --secondary-accent-color:#57c0f8;
 }
 
 * {
@@ -10,34 +10,36 @@
 }
 
 header {
-  background-color:var(--yellow);  
+  background-color:var(--background-color);  
   min-height: 80px;
   display: block;
 }
 
 h1 {
-  color:var(--pink);
+  color:var(--main-accent-color);
   display:inline-block;
   position: relative;
   top: 15px;
   padding: 2px 6px 2px 50px;
-  background-color:var(--turquoise);
+  background-color:var(--secondary-accent-color);
 }
 
 ul, li {
-  display: inline;
+  display: flex;
   float: right;
-  background-color: var(--yellow);
+  background-color: var(--background-color);
   margin-right: 15px;
   margin-top: 15px;
 }
 
 li {
   margin-left: 15px;
+  font-size: 17px;
 }
 
-  .nav-headings:hover {
-    color:var(--turquoise);
+  .nested-item:hover {
+    filter:brightness(1.2);
+    transition: all 0.5s ease-in-out;
   }
 
 img {
@@ -62,11 +64,11 @@ h6 {
 
 p {
   margin: 0;
-  color: var(--pink);
+  color: var(--main-accent-color);
 }
 
 body {
-  background-color: var(--yellow);
+  background-color: var(--background-color);
 }
 
 .page-wrapper {
@@ -82,7 +84,7 @@ body {
 
 a {
   text-decoration: underline;
-  color:var(--pink);
+  color:var(--main-accent-color);
 }
 
 #hero-banner {
@@ -90,7 +92,7 @@ a {
   position: relative;
   padding-top: 50px;
   height: 100px;
-  background-color:var(--turquoise);
+  background-color:var(--secondary-accent-color);
 }
 
 .hero-heading {
@@ -98,8 +100,8 @@ a {
   bottom:25px;
   display: block;
   right: 50px;
-  background-color:var(--yellow);
-  color:var(--pink);
+  background-color:var(--background-color);
+  color:var(--main-accent-color);
   padding: 2px;
   z-index: 10;
 }
@@ -124,7 +126,7 @@ a {
 
   /* add in code here that applies to all parent grid items, eg. heading, opaque background bit? */
 .grid-item {
-  background-color: var(--yellow);
+  background-color: var(--background-color);
 }
   
   /* positioning of the grid items */
@@ -133,7 +135,7 @@ a {
   grid-row: 1 / span 1;
   display: flex;
   justify-content: flex-end;
-  border-right: 5px solid var(--pink);
+  border-right: 5px solid var(--main-accent-color);
   }
   
   #about-text {
@@ -148,7 +150,7 @@ a {
   grid-row: 2 / span 1;
   display: flex;
   justify-content: flex-end;
-  border-right: 5px solid var(--pink);
+  border-right: 5px solid var(--main-accent-color);
   }
   
   /* this is the nested container position */
@@ -164,16 +166,25 @@ a {
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
-  border-right: 5px solid var(--pink);
+  border-right: 5px solid var(--main-accent-color);
   }
   
   #contact-links {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  margin-left: 10px;
   grid-column: 2 / span 1;
   grid-row: 3 / span 1;
   padding-top: 20px;
   }
+
+  #contact-links a {
+    margin-right: 15px;
+  }
+
+  a:hover {
+      color:var(--secondary-accent-color);
+    }
 
   #projects-grid-container {
     display: grid;
@@ -194,7 +205,7 @@ a {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      border: 3px solid var(--turquoise);
+      border: 3px solid var(--secondary-accent-color);
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -205,7 +216,7 @@ a {
 
 /* styles for nested grid headings */
     h4 {
-      color:var(--pink);
+      color:var(--main-accent-color);
       height: fit-content;
       width: fit-content;
       padding: 5px;
@@ -214,7 +225,7 @@ a {
     }
 
     .text {
-      background-color:var(--turquoise);
+      background-color:var(--secondary-accent-color);
       width: fit-content;
       height: fit-content;
       display: block;
