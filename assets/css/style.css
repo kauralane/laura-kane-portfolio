@@ -191,7 +191,9 @@ a {
     
     /* add code in here for properties that you want on all the nested grid items */
     .nested-item {
-      display: grid;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       border: 3px solid var(--turquoise);
       background-position: center;
       background-size: cover;
@@ -202,13 +204,24 @@ a {
 
 /* styles for nested grid headings */
     h4 {
-      background-color:var(--turquoise);
       color:var(--pink);
       height: fit-content;
       width: fit-content;
       padding: 5px;
       font-size: 18px;
       display: block;
+    }
+
+    .text {
+      background-color:var(--turquoise);
+      width: fit-content;
+      height: fit-content;
+      display: block;
+    }
+
+    .text p {
+      padding: 0 5px 5px 5px;
+      font-size: 14px;
     }
     
     /* Positioning individual project elements within the nested grid */
