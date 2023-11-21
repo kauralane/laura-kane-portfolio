@@ -122,7 +122,6 @@ a {
   "work-heading projects-grid-container"
   "contact-heading contact-links";
   } 
-  /* need to add in a column gap */
 
   /* add in code here that applies to all parent grid items, eg. heading, opaque background bit? */
 .grid-item {
@@ -199,6 +198,25 @@ a {
     "project-2 project-3"
     "project-4 project-5";
     }
+
+/* style for phone viewing - NOT WORKING */
+    /* @media only screen and (max-width: 700px) {
+    #projects-grid-container {
+      display: grid;
+      position: relative;
+      max-width: 100vh;
+      max-height: 100vh;
+      grid-template-rows: repeat(6, 1fr);
+      grid-template-columns: 1fr;
+      grid-template-areas:
+      "project-1"
+      "project-1"
+      "project-2" 
+      "project-3"
+      "project-4" 
+      "project-5";
+    }
+    } */
     
     /* add code in here for properties that you want on all the nested grid items */
     .nested-item {
