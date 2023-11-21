@@ -1,7 +1,7 @@
 :root {
-  --pink:#D703FC;
-  --yellow:#FCD703;
-  --turquoise:#03FCD7;
+  --pink:#cb46e3;
+  --yellow:hsl(51, 86%, 75%);
+  --turquoise:#57c0f8;
 }
 
 * {
@@ -175,9 +175,7 @@ a {
       background-size: cover;
       background-repeat: no-repeat;
       margin: 5px;
-      padding:
       }
-        /* borders just to help me see */
 
 /* styles for nested grid headings */
     .heading {
