@@ -11,6 +11,7 @@
 
 header {
   background-color:var(--yellow);  
+  min-height: 100px;
 }
 
 h1 {
@@ -21,6 +22,33 @@ h1 {
   top: 15px;
   padding: 2px 4px 2px 4px;
   background-color:var(--turquoise);
+}
+
+ul, li {
+  display: inline;
+  float: right;
+  background-color: var(--yellow);
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+li {
+  margin-left: 15px;
+}
+
+  .nav-headings:hover {
+    color:var(--turquoise);
+  }
+
+img {
+  display: block;
+  max-height:150px;
+  max-width:150px;
+  border-radius: 75px;
+  position: absolute;
+  left: 80px;
+  top: 80px;
+  z-index: 10;
 }
 
 body {
@@ -45,20 +73,9 @@ body {
   background-color: var(--yellow);
 }
 
-ul, li {
-  display: flex;
-  justify-content: flex-end;
-  background-color: var(--yellow);
-  margin-right: 15px;
+.page-wrapper {
+  justify-content: center;
 }
-
-li {
-  margin-left: 15px;
-}
-
-  .nav-headings:hover {
-    color:var(--turquoise);
-  }
 
 .title {
   font-weight: bold;
@@ -73,8 +90,7 @@ a {
 }
 
 #hero-banner {
-  display:flex;
-  justify-content: flex-end;
+  display: block;
   position: relative;
   padding-top: 50px;
   height: 100px;
@@ -83,10 +99,12 @@ a {
 
 .hero-heading {
   position: absolute;
+  display: block;
   right: 25px;
   background-color:var(--yellow);
   color:var(--pink);
   padding: 2px;
+  z-index: 10;
 }
 
 /* style for the parent grid container */
@@ -96,6 +114,7 @@ a {
   height: 100vh;
   padding-top: 20px;
   row-gap: 20px;
+  align-content: center;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
@@ -153,6 +172,7 @@ a {
   justify-content: space-evenly;
   grid-column: 2 / span 1;
   grid-row: 3 / span 1;
+  padding-top: 50px;
   }
 
   #projects-grid-container {
