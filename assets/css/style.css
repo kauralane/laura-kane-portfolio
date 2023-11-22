@@ -296,3 +296,53 @@ img {
       grid-row: 4 / span 1;
       background-image:url("../images/project-5.jpeg");
     }
+
+    @media only screen and (max-width: 600px) {
+      #hero-banner {
+        display: flex;
+        flex-direction:column;
+      }
+
+      .title {
+        font-size: 16px;
+      }
+
+      img {
+        max-width: 100px;
+        max-height: 100px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+    }
+
+    @media only screen and (max-width: 463px) {
+      
+      #hero-banner {
+        max-height: 80px;
+      }
+
+      .hero-heading {
+        font-size: 16px;
+      }
+
+      img {
+        max-width: 80px;
+        max-height: 80px;
+        display: flex;
+      }
+
+      .title {
+        font-size: 14px;
+      }
+      
+      .heading {
+        font-size: 13px;
+      }
+
+      .text p {
+        font-size: 12px;
+      }
+    }
