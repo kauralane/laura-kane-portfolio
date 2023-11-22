@@ -7,7 +7,7 @@ I learnt from doing this project that it's definitely best to do media queries, 
 
 This page showcases my CV, how to contact me, and gives a flavour of some of the projects I've done so far. 
 
-Deployed application: 
+[Deployed application](https://kauralane.github.io/laura-kane-portfolio/)
 
 [Screenshot](assets/images/screenshot.png)
 
