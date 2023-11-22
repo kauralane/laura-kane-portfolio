@@ -19,7 +19,7 @@ h1 {
   color:var(--main-accent-color);
   display:inline-block;
   position: relative;
-  top: 15px;
+  top: 20px;
   padding: 2px 6px 2px 50px;
   background-color:var(--secondary-accent-color);
 }
@@ -37,15 +37,54 @@ li {
   font-size: 17px;
 }
 
+/* Phone styles for nav bar */
+
 @media only screen and (max-width: 600px) {
   ul, li {
+  display: flex;
   flex-direction: column;
-  float: left;
+  row-gap: 0;
+  align-items: left;
+  margin: 00px;
+  padding: 0px;
+  }
+
+  ul {
+    margin: 10px;
   }
 
   h1 {
     padding: 2px 6px 2px 6px;
     float: left;
+  }
+}
+
+/* Smaller phone style for nav bar */
+
+@media only screen and (max-width: 390px) {
+  
+  li {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0;
+  align-items: left;
+  margin: 00px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-content: left;
+    margin: 5px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    width: 95%;
+  }
+
+  h1 {
+    padding: 2px 6px 2px 6px;
+    float: left;
+    background-color: var(--secondary-accent-color);
   }
 }
 
@@ -158,13 +197,6 @@ img {
   border-right: 5px solid var(--main-accent-color);
   }
   
-  /* this is the nested container position */
-  /* #projects-grid-container {
-  grid-column: 2 / span 1;
-  grid-row: 2 / span 1;
-  } */
-  /* unsure how this works because class projects-grid-container is held elsewhere?  */
-  
   .contact-heading {
   grid-column: 1 / span 1;
   grid-row: 3 / span 1;
@@ -191,6 +223,14 @@ img {
       color:var(--secondary-accent-color);
     }
 
+    @media only screen and (max-width: 600px) {
+    #contact-links {
+      display: flex;
+      flex-direction: row;
+      padding-top: 0;
+    }
+    }
+
   #projects-grid-container {
     display: grid;
     position: relative;
@@ -205,24 +245,56 @@ img {
     "project-4 project-5";
     }
 
-/* style for phone viewing - NOT WORKING */
-    /* @media only screen and (max-width: 700px) {
+    /* Phone styles for main wrapper area */
+    @media only screen and (max-width: 600px) {
+
+      .parent-grid-container {  
+        display: flex;
+        flex-direction: column;
+        row-gap: 0;
+        height: fit-content;
+        } 
+
+      .work-heading, .about-heading, .contact-heading {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        height: fit-content;
+        float: left;
+        padding: 5px;
+        margin-left: 10px;
+        align-items: center;
+        border-right: 0;
+        border-bottom: 3px solid var(--main-accent-color);
+        margin-bottom: 5px;
+      }
+
+      /* Phone styles for project grid */
     #projects-grid-container {
-      display: grid;
-      position: relative;
-      max-width: 100vh;
-      max-height: 100vh;
-      grid-template-rows: repeat(6, 1fr);
-      grid-template-columns: 1fr;
-      grid-template-areas:
-      "project-1"
-      "project-1"
-      "project-2" 
-      "project-3"
-      "project-4" 
-      "project-5";
+      display: flex;
+      flex-direction: column;
+      height: fit-content;
+      margin-bottom: 5px;
     }
-    } */
+
+      .nested-item {
+        min-height: 100px;
+      }
+
+      #about-text {
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+
+      .heading {
+        font-size: 15px;
+        padding-bottom: 1px;
+      }
+
+      .text {
+        font-size: 12px;
+      }
+    }
     
     /* add code in here for properties that you want on all the nested grid items */
     .nested-item {
@@ -334,15 +406,4 @@ img {
         display: flex;
       }
 
-      .title {
-        font-size: 14px;
-      }
-      
-      .heading {
-        font-size: 13px;
-      }
-
-      .text p {
-        font-size: 12px;
-      }
     }
