@@ -5,7 +5,7 @@ This application is the first iteration of my front-end web development page. I 
 
 I learnt from doing this project that it's definitely best to do media queries, styling for smaller screens, as you go! I left all my media queries to the end and then struggled with getting all my elements to resize nicely. 
 
-This page showcases my CV, how to contact me, and gives a flavour of some of the projects I've done so far. 
+This page showcases my CV, how to contact me, and gives a flavour of some of the projects I've done so far. There's a couple of projects 'coming soon' - I look forward to sharing these once they are ready.
 
 [Deployed application](https://kauralane.github.io/laura-kane-portfolio/)
 
@@ -22,5 +22,5 @@ Normalise.css sheet taken from @github.com/necolas/normalize.css - thanks to @ne
 
 And of course thanks to W3Schools and CSS-tricks for their guides on flexbox and grid...
 
-## License
+## License
 Licensed under the MIT License.
