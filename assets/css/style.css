@@ -464,8 +464,8 @@ h4 {
   }
 }
 
-/* Styles for header, nav, banner and profile image for <390px */
-@media only screen and (max-width: 390px) {
+/* Styles for header, nav, banner and profile image for <375px */
+@media only screen and (max-width: 375px) {
   ul {
     position: relative;
   }
