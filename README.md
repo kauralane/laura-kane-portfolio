@@ -22,5 +22,5 @@ Normalise.css sheet taken from @github.com/necolas/normalize.css - thanks to @ne
 
 And of course thanks to W3Schools and CSS-tricks for their guides on flexbox and grid...
 
-## License
+## License
 Licensed under the MIT License.
