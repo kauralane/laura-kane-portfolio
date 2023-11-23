@@ -1,16 +1,42 @@
+/* Colour scheme */
 :root {
-  --main-accent-color:#F917BC;
-  --background-color:white;
-  --secondary-accent-color:black;
+  --main-accent-color: #F917BC;
+  --background-color: white;
+  --secondary-accent-color: black;
 }
 
+/* Overall styles */
 * {
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   overflow-x: hidden;
 }
 
+/* Single element styles throughout HTML */
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  color: var(--main-accent-color);
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+footer {
+  text-align: center;
+  background-color: var(--secondary-accent-color);
+  padding: 5px;
+}
+
+/* Header and nav bar styles for >600px */
 header {
-  background-color:var(--background-color);  
+  background-color: var(--background-color);
   min-height: 80px;
   display: block;
 }
@@ -20,15 +46,16 @@ header {
 }
 
 h1 {
-  color:var(--main-accent-color);
-  display:inline-block;
+  color: var(--main-accent-color);
+  display: inline-block;
   position: relative;
   top: 20px;
   padding: 2px 6px 2px 50px;
-  background-color:var(--secondary-accent-color);
+  background-color: var(--secondary-accent-color);
 }
 
-ul, li {
+ul,
+li {
   display: flex;
   float: right;
   background-color: var(--background-color);
@@ -41,16 +68,22 @@ li {
   font-size: 17px;
 }
 
-/* Phone styles for nav bar */
+a {
+  text-decoration: underline;
+  color: var(--main-accent-color);
+}
 
+/* Header and nav bar styles for <600px */
 @media only screen and (max-width: 600px) {
-  ul, li {
-  display: flex;
-  flex-direction: column;
-  row-gap: 0;
-  align-items: left;
-  margin: 00px;
-  padding: 0px;
+
+  ul,
+  li {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0;
+    align-items: left;
+    margin: 00px;
+    padding: 0px;
   }
 
   ul {
@@ -63,16 +96,15 @@ li {
   }
 }
 
-/* Smaller phone style for nav bar */
-
+/* Header and nav bar styles for <390px */
 @media only screen and (max-width: 390px) {
-  
+
   li {
-  display: flex;
-  flex-direction: column;
-  row-gap: 0;
-  align-items: left;
-  margin: 00px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0;
+    align-items: left;
+    margin: 00px;
   }
 
   ul {
@@ -92,24 +124,37 @@ li {
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
+/* Styles for hero banner area */
+#hero-banner {
+  display: block;
+  position: relative;
+  padding-top: 50px;
+  height: 100px;
+  background-color: var(--secondary-accent-color);
 }
 
-p {
-  margin: 0;
-  color: var(--main-accent-color);
+.main-profile-pic {
+  position: absolute;
+  top: 0px;
+  left: 15px;
+  max-height: 150px;
+  max-width: 150px;
+  border-radius: 75px;
+  z-index: 10;
 }
 
-body {
+.hero-heading {
+  position: absolute;
+  bottom: 25px;
+  display: block;
+  right: 50px;
   background-color: var(--background-color);
+  color: var(--main-accent-color);
+  padding: 2px;
+  z-index: 10;
 }
 
+/* Main area / page wrapper styling */
 .page-wrapper {
   justify-content: center;
 }
@@ -121,42 +166,8 @@ body {
   text-align: right;
 }
 
-a {
-  text-decoration: underline;
-  color:var(--main-accent-color);
-}
-
-#hero-banner {
-  display: block;
-  position: relative;
-  padding-top: 50px;
-  height: 100px;
-  background-color:var(--secondary-accent-color);
-}
-
-.main-profile-pic {
-  position: absolute;
-  top: 0px;
-  left: 15px;
-  max-height:150px;
-  max-width:150px;
-  border-radius: 75px;
-  z-index: 10;
-}
-
-.hero-heading {
-  position: absolute;
-  bottom:25px;
-  display: block;
-  right: 50px;
-  background-color:var(--background-color);
-  color:var(--main-accent-color);
-  padding: 2px;
-  z-index: 10;
-}
-
-/* style for the parent grid container */
-.parent-grid-container {  
+/* style and positioning for the parent grid container for >600px*/
+.parent-grid-container {
   display: grid;
   width: 100vw;
   height: 100vh;
@@ -167,306 +178,307 @@ a {
   grid-template-rows: 20% 1fr 10%;
   grid-template-columns: 16% 80%;
   grid-template-areas:
-  "about-heading about-text"
-  "work-heading projects-grid-container"
-  "contact-heading contact-links";
-  } 
+    "about-heading about-text"
+    "work-heading projects-grid-container"
+    "contact-heading contact-links";
+}
 
-  /* add in code here that applies to all parent grid items, eg. heading, opaque background bit? */
+/* styling and positioning of parent grid items for >600px */
 .grid-item {
   background-color: var(--background-color);
+  height: auto;
 }
-  
-  /* positioning of the grid items */
-  .about-heading {
+
+.about-heading {
   grid-column: 1 / span 1;
   grid-row: 1 / span 1;
   display: flex;
   justify-content: flex-end;
   border-right: 5px solid var(--main-accent-color);
-  }
-  
-  #about-text {
+}
+
+#about-text {
   grid-column: 2 / span 1;
   grid-row: 1 / span 1;
   margin-left: 10px;
   line-height: 1.5;
-  }
-  
-.grid-item {
-  height: auto;
 }
 
-  .work-heading {
+.work-heading {
   grid-column: 1 / span 1;
   grid-row: 2 / span 1;
   display: flex;
   justify-content: flex-end;
   border-right: 5px solid var(--main-accent-color);
-  }
-  
-  .contact-heading {
+}
+
+.contact-heading {
   grid-column: 1 / span 1;
   grid-row: 3 / span 1;
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
   border-right: 5px solid var(--main-accent-color);
-  }
-  
-  #contact-links {
+}
+
+#contact-links {
   display: flex;
   justify-content: flex-start;
   margin-left: 10px;
   grid-column: 2 / span 1;
   grid-row: 3 / span 1;
   padding-top: 20px;
+}
+
+#contact-links a {
+  margin-right: 15px;
+}
+
+a:hover {
+  color: var(--secondary-accent-color);
+}
+
+/* style and positioning for the parent grid container and grid items for <600px */
+@media only screen and (max-width: 600px) {
+
+  .parent-grid-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0;
+    height: fit-content;
   }
 
-  #contact-links a {
-    margin-right: 15px;
+  .work-heading,
+  .about-heading,
+  .contact-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: fit-content;
+    float: left;
+    padding: 5px;
+    margin-left: 10px;
+    align-items: center;
+    border-right: 0;
+    border-bottom: 3px solid var(--main-accent-color);
+    margin-bottom: 5px;
   }
 
-  a:hover {
-      color:var(--secondary-accent-color);
-    }
+  #contact-links {
+    display: flex;
+    flex-direction: row;
+    padding-top: 0;
+  }
+}
 
-    @media only screen and (max-width: 600px) {
-    #contact-links {
-      display: flex;
-      flex-direction: row;
-      padding-top: 0;
-    }
-    }
-
-  #projects-grid-container {
-    display: grid;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
+/* Styling and positioning for nested project grid container for >600px */
+#projects-grid-container {
+  display: grid;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
     "project-1 project-1"
     "project-1 project-1"
     "project-2 project-3"
     "project-4 project-5";
-    }
+}
 
-    /* Phone styles for main wrapper area */
-    @media only screen and (max-width: 600px) {
+/* Styling and positioning for nested grid items for >600px */
+.nested-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 3px solid var(--main-accent-color);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
 
-      .parent-grid-container {  
-        display: flex;
-        flex-direction: column;
-        row-gap: 0;
-        height: fit-content;
-        } 
+.nested-item:hover {
+  filter: brightness(1.2);
+  transition: all 0.5s ease-in-out;
+}
 
-      .work-heading, .about-heading, .contact-heading {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        height: fit-content;
-        float: left;
-        padding: 5px;
-        margin-left: 10px;
-        align-items: center;
-        border-right: 0;
-        border-bottom: 3px solid var(--main-accent-color);
-        margin-bottom: 5px;
-      }
+h4 {
+  color: var(--secondary-accent-color);
+  height: fit-content;
+  width: fit-content;
+  padding: 5px;
+  font-size: 18px;
+  display: block;
+}
 
-      /* Phone styles for project grid */
-    #projects-grid-container {
-      display: flex;
-      flex-direction: column;
-      height: fit-content;
-      margin-bottom: 5px;
-    }
+.text {
+  background-color: var(--main-accent-color);
+  width: fit-content;
+  height: fit-content;
+  display: block;
+}
 
-      .nested-item {
-        min-height: 100px;
-      }
+.text p {
+  padding: 0 5px 5px 5px;
+  font-size: 14px;
+  color: var(--secondary-accent-color);
+}
 
-      #about-text {
-        font-size: 14px;
-        margin-bottom: 5px;
-      }
+.project-1 {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  background-image: url("../images/CSS.png");
+}
 
-      .heading {
-        font-size: 15px;
-        padding-bottom: 1px;
-      }
+.project-2 {
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1;
+  background-image: url("../images/horiseon.png");
+}
 
-      .text {
-        font-size: 12px;
-      }
-    }
-    
-    /* add code in here for properties that you want on all the nested grid items */
-    .nested-item {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      border: 3px solid var(--main-accent-color);
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      margin: 5px;
-      cursor: pointer;
-      text-decoration: none;
-      }
+.project-3 {
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+  background-image: url("../images/prework.png");
+}
 
-      .nested-item:hover {
-        filter:brightness(1.2);
-        transition: all 0.5s ease-in-out;
-      }
+.project-4 {
+  grid-column: 1 / span 1;
+  grid-row: 4 / span 1;
+  background-image: url("../images/project-4.jpeg");
+}
 
-/* styles for nested grid headings */
-    h4 {
-      color:var(--secondary-accent-color);
-      height: fit-content;
-      width: fit-content;
-      padding: 5px;
-      font-size: 18px;
-      display: block;
-    }
+.project-5 {
+  grid-column: 2 / span 1;
+  grid-row: 4 / span 1;
+  background-image: url("../images/project-5.jpeg");
+}
 
-    .text {
-      background-color:var(--main-accent-color);
-      width: fit-content;
-      height: fit-content;
-      display: block;
-    }
+/* Style for nested project grid and nested grid items for <600px */
+@media only screen and (max-width: 600px) {
+  #projects-grid-container {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    margin-bottom: 5px;
+  }
 
-    .text p {
-      padding: 0 5px 5px 5px;
-      font-size: 14px;
-      color:var(--secondary-accent-color);
-    }
-    
-    /* Positioning individual project elements within the nested grid */
-    .project-1 {
-      grid-column: 1 / span 2;
-      grid-row: 1 / span 2;
-      background-image: url("../images/CSS.png");
-    }
-    
-    .project-2 {
-      grid-column: 1 / span 1;
-      grid-row: 3 / span 1;
-      background-image:url("../images/horiseon.png");
-    }
-    
-    .project-3 {
-      grid-column: 2 / span 1;
-      grid-row: 3 / span 1;
-      background-image:url("../images/prework.png");
-    }
-    
-    .project-4 {
-      grid-column: 1 / span 1;
-      grid-row: 4 / span 1;
-      background-image:url("../images/project-4.jpeg");
-    }
-    
-    .project-5 {
-      grid-column: 2 / span 1; 
-      grid-row: 4 / span 1;
-      background-image:url("../images/project-5.jpeg");
-    }
+  .nested-item {
+    min-height: 100px;
+  }
 
-    @media only screen and (max-width: 600px) {
-      #hero-banner {
-        display: flex;
-        flex-direction:column;
-        max-height: fit-content;
-        padding: 0;
-        }
+  #about-text {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
 
-        header {
-          max-height: fit-content;
-        }
+  .heading {
+    font-size: 15px;
+    padding-bottom: 1px;
+  }
 
-      .title {
-        font-size: 16px;
-      }
+  .text {
+    font-size: 12px;
+  }
+}
 
-      h2 {
-        font-size: 20px;
-        display: flex;
-      }
+/* Styles for header, nav, banner, and profile image for <600px */
 
-      .main-profile-pic {
-        display: none;
-      }
+@media only screen and (max-width: 600px) {
+  #hero-banner {
+    display: flex;
+    flex-direction: column;
+    max-height: fit-content;
+    padding: 0;
+  }
 
-      .mobile-profile-pic {
-        display: flex;
-        flex-direction: row-reverse;
-        max-height: 100px;
-        align-items:flex-start;
-        float: right;
-        border-radius: 50%;
-        padding: 5px;
-      }
-    }
+  header {
+    max-height: fit-content;
+  }
 
-    @media only screen and (max-width: 500px) {
-      
-      #hero-banner {
-        max-height: fit-content;
-        padding: 0;
-        display: flex;
-      }
+  .title {
+    font-size: 16px;
+  }
 
-      .hero-heading {
-        bottom: 5px;
-      }
+  h2 {
+    font-size: 20px;
+    display: flex;
+  }
 
-      header {
-        max-height: fit-content;
-      }
+  .main-profile-pic {
+    display: none;
+  }
 
-      .main-profile-pic {
-        display: none;
-      }
+  .mobile-profile-pic {
+    display: flex;
+    flex-direction: row-reverse;
+    max-height: 100px;
+    align-items: flex-start;
+    float: right;
+    border-radius: 50%;
+    padding: 5px;
+  }
+}
 
-      .mobile-profile-pic {
-        display: flex;
-        flex-direction: row-reverse;
-        max-height: 130px;
-        align-items:flex-start;
-        float: right;
-        border-radius: 50%;
-        padding: 5px;
-      }
+/* Styles for header, nav, banner and profile image for <500px */
+@media only screen and (max-width: 500px) {
 
-      ul {
-        margin-top: 25px;
-        float: left;
-      }
+  #hero-banner {
+    max-height: fit-content;
+    padding: 0;
+    display: flex;
+  }
 
-      li {
-        font-size: 15px;
-      }
-    }
+  .hero-heading {
+    bottom: 5px;
+  }
 
-    @media only screen and (max-width: 390px) {
-      ul {
-        position: relative;
-      }
+  header {
+    max-height: fit-content;
+  }
 
-      li {
-        font-size: 15px;
-      }
+  .main-profile-pic {
+    display: none;
+  }
 
-      header {
-        max-height: fit-content;
-      }
+  .mobile-profile-pic {
+    display: flex;
+    flex-direction: row-reverse;
+    max-height: 130px;
+    align-items: flex-start;
+    float: right;
+    border-radius: 50%;
+    padding: 5px;
+  }
 
-      .mobile-profile-pic {
-        display: none;
-      }
-    }
+  ul {
+    margin-top: 25px;
+    float: left;
+  }
+
+  li {
+    font-size: 15px;
+  }
+}
+
+/* Styles for header, nav, banner and profile image for <390px */
+@media only screen and (max-width: 390px) {
+  ul {
+    position: relative;
+  }
+
+  li {
+    font-size: 15px;
+  }
+
+  header {
+    max-height: fit-content;
+  }
+
+  .mobile-profile-pic {
+    display: none;
+  }
+}
