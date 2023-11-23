@@ -15,6 +15,10 @@ header {
   display: block;
 }
 
+.mobile-profile-pic {
+  display: none;
+}
+
 h1 {
   color:var(--main-accent-color);
   display:inline-block;
@@ -130,7 +134,7 @@ a {
   background-color:var(--secondary-accent-color);
 }
 
-img {
+.main-profile-pic {
   position: absolute;
   top: 0px;
   left: 15px;
@@ -373,37 +377,92 @@ img {
       #hero-banner {
         display: flex;
         flex-direction:column;
-      }
+        max-height: fit-content;
+        padding: 0;
+        }
+
+        header {
+          max-height: fit-content;
+        }
 
       .title {
         font-size: 16px;
       }
 
-      img {
-        max-width: 100px;
-        max-height: 100px;
-      }
-
       h2 {
         font-size: 20px;
-      }
-
-    }
-
-    @media only screen and (max-width: 463px) {
-      
-      #hero-banner {
-        max-height: 80px;
-      }
-
-      .hero-heading {
-        font-size: 16px;
-      }
-
-      img {
-        max-width: 80px;
-        max-height: 80px;
         display: flex;
       }
 
+      .main-profile-pic {
+        display: none;
+      }
+
+      .mobile-profile-pic {
+        display: flex;
+        flex-direction: row-reverse;
+        max-height: 100px;
+        align-items:flex-start;
+        float: right;
+        border-radius: 50%;
+        padding: 5px;
+      }
+    }
+
+    @media only screen and (max-width: 500px) {
+      
+      #hero-banner {
+        max-height: fit-content;
+        padding: 0;
+        display: flex;
+      }
+
+      .hero-heading {
+        bottom: 5px;
+      }
+
+      header {
+        max-height: fit-content;
+      }
+
+      .main-profile-pic {
+        display: none;
+      }
+
+      .mobile-profile-pic {
+        display: flex;
+        flex-direction: row-reverse;
+        max-height: 130px;
+        align-items:flex-start;
+        float: right;
+        border-radius: 50%;
+        padding: 5px;
+      }
+
+      ul {
+        margin-top: 25px;
+        float: left;
+      }
+
+      li {
+        font-size: 15px;
+      }
+    }
+
+    @media only screen and (max-width: 390px) {
+      ul {
+        margin-top: -60px;
+      }
+
+      li {
+        font-size: 15px;
+      }
+
+      header {
+        max-height: fit-content;
+      }
+
+      .mobile-profile-pic {
+        visibility: hidden;
+      }
     }
